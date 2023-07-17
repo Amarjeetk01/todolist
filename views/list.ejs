@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    
+    <link  rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- <h1>It's a <%= kindOfDay %>.</h1> -->
+    <!-- <% if (kindOfDay === "Saturday" || kindOfDay === "Sunday") { %> -->
+        <!-- <h1 style="color: purple; font-family: 'Dancing Script', cursive;"><%= kindOfDay %> To Do List</h1> -->
+    <!-- <% } else { %> -->
+        <!-- <h1 style="color: blue; font-family: 'Dancing Script', cursive;"><%= kindOfDay %> To Do List</h1> -->
+    <!-- <% } %> -->
+    <div class="box" id="heading">
+    <h1><%= kindOfDay %> (<%= kindOfDayhi %>)</h1>
+    <h2> To Do List</h2></div>
+    <div class="box">
+        <% for(let i=0;i<newListItems.length;i++){ %>
+            <div class="item">
+                <input type="checkbox">
+            <p><%=newListItems[i]%></p></div>
+        <%}%>
+        <form class="items" action="/" method="post">
+            <input type="text" name="newItems" placeholder="NewItems" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>
+    </div>
+
+</body>
+</html>
